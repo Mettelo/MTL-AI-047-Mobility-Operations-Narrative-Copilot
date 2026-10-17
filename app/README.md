@@ -1,0 +1,2 @@
+# Application delivery contract
+Teams implement a local interface showing source/version, reporting controls, coverage, deterministic KPIs, draft narrative, per-claim evidence/checks and review status. Provide edit/reject/approve actions and revision-aware export. Clearly label draft, blocked, approved and deterministic-baseline states. Accessible tables and textual status must accompany colour indicators. Core logic belongs in src/, with state/export behaviour tested.
