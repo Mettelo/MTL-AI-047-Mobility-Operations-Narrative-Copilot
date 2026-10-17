@@ -2,48 +2,24 @@
 
 ## Release sequence
 
-1. Complete D1–D12 and map all agreed user requirements to deliverables, acceptance criteria, tests and final evidence.
-2. Confirm the approved source/data manifest, rights/attribution, exact cohort/version and reviewer restore access.
-3. Freeze deterministic rules, prompts, model/runtime version, evaluation split, schemas and dependency lock before final held-out evaluation.
-4. Run the deterministic baseline and local-AI workflow. Preserve raw outputs, invalid outputs, retries/fallbacks, rejected claims and measured results; do not replace weak runs with hand-written examples.
-5. Execute the project-specific domain/guardrail tests and **three UAT tasks** with expected/actual results, tester/reviewer, defects and retests. Resolve all critical/high defects.
-6. Have a distinct member perform a clean rerun from the documented source and environment. Record hashes, versions, entry point, elapsed time, discrepancies and reconciliation.
-7. Produce a **2-page decision brief**, **8–12 slides** and a **5–10 minute reproducible demo** for Mobility Operations Manager. Include five evidence-backed findings, three next actions and at least one defer/unknown case.
-8. Complete `submission/FINAL_SUBMISSION.md`, `CONTRIBUTIONS.md` and the immutable evidence index.
-9. Tag the evaluated commit **`v1.0-mettelo-submission`** and verify reviewer access. Do not silently move the assessed tag.
+1. Finish D1–D12 and link agreed user requirements to deliverables, acceptance criteria, tests and evidence.
+2. Confirm the UCI source manifest, licence/attribution, hourly/daily grain controls and reviewer restore access.
+3. Freeze KPI formulas, comparison-window/coverage rules, evidence schema, prompts, local model/runtime and dependency lock.
+4. Run the deterministic KPI engine before every narrative evaluation. Preserve evidence packets, raw model outputs, verification results, blocked claims and failures.
+5. Execute project domain/claim-verification tests and **three UAT tasks**. Resolve all critical/high defects and retain retests.
+6. A distinct member performs a clean rerun and reconciles deterministic KPIs/evidence IDs.
+7. Produce a 2-page management brief, 8–12 slides and a 5–10 minute demo for the **Mobility Operations Manager**.
+8. Complete `submission/FINAL_SUBMISSION.md`, contribution evidence and evidence index.
+9. Tag the evaluated commit **`v1.0-mettelo-submission`** and verify reviewer access.
 
-## Required walkthrough
+## Walkthrough
 
-Answer the commissioned decision:
+Demonstrate one valid comparison, one coverage-blocked comparison, one verified narrative, one deliberately corrupted claim rejected by the verifier and one human-approved export.
 
-> Produce a verified management briefing from deterministic mobility KPIs without allowing the AI to calculate or invent metrics.
-
-Demonstrate one valid comparison, one coverage-blocked comparison, one verified narrative, one deliberately corrupted claim rejected and one human-approved export.
-
-Show one failure/edge case and explain what the evidence **does not** support.
-
-Preserve this project boundary:
-
-> The AI writes from verified evidence only. Historical rental counts do not prove unmet demand, station shortages, revenue, staffing needs or weather causation.
+Explain that the AI does not calculate metrics and that historical rental records cannot establish capacity shortage, unmet demand, revenue or causal weather effects.
 
 ## Required evidence bundle
 
-- team repository URL, final commit SHA and release tag;
-- reviewed master commit;
-- requirements/traceability index;
-- source/data manifest and restore instructions;
-- deterministic baseline outputs;
-- local model/runtime/prompt/config versions;
-- held-out evaluation results with denominators;
-- failed/rejected/guarded examples;
-- UAT records and defect/retest log;
-- independent clean-rerun record;
-- technical/operational handover;
-- final decision brief and demo;
-- individual contribution evidence.
+Team repo/final SHA/tag; reviewed master commit; source manifest; traceability; KPI catalogue; evidence packets; baseline/local-model outputs; held-out evaluation with denominators; blocked/rejected claims; UAT/defects; independent rerun; handover; decision brief/demo; contributions.
 
-## Reviewer decision
-
-The reviewer records **ACCEPTED / REWORK / BLOCKED**, actual reviewer, simulated sponsor role, date, unresolved issues and owners/due dates.
-
-A filled template, screenshot, video or fluent AI output without executed evidence is not acceptance.
+Reviewer records **ACCEPTED / REWORK / BLOCKED** with actual reviewer/date, simulated sponsor role and unresolved issues/owners.

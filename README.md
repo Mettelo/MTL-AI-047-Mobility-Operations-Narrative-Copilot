@@ -52,7 +52,7 @@ No paid API, cloud hosting, managed database, vector service, GPU purchase, free
 4. Build and independently check [KPI calculations](project/KPI_SPECIFICATION.md).
 5. Implement [evidence, generation and verification](project/AI_WORKFLOW.md), then [human review and governance](project/GOVERNANCE.md).
 6. Run the [evaluation protocol](project/EVALUATION.md) and [acceptance checks](project/ACCEPTANCE_CRITERIA.md).
-7. Follow the [submission guide](submission/SUBMISSION_GUIDE.md) and complete the [final submission](submission/FINAL_SUBMISSION.md).
+7. Follow the [submission guide](submission/SUBMISSION_GUIDE.md) and copy the [final submission template](submission/FINAL_SUBMISSION_TEMPLATE.md) into your separate team repository as `submission/FINAL_SUBMISSION.md` and complete it with executed evidence.
 
 ## Pack navigation
 - [Repository structure](project/REPOSITORY_STRUCTURE.md)

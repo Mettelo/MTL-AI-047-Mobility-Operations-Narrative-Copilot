@@ -1,2 +1,0 @@
-# Configuration
-Version reporting windows, metric definitions, 95% coverage and 30-hour group policies, display precision, local model/digest, context/output/time limits, schema and prompt IDs. Config changes require documented review and affected evaluation reruns. Treat file paths and user strings as inputs, never instructions or executable code. Keep local defaults in .env.example; no credentials required.
