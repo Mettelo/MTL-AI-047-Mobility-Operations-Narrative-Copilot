@@ -1,19 +1,24 @@
-# Required deliverables
+# Deliverables — MTL-AI-047
 
-| ID | Deliverable | Minimum content | Acceptance link |
+All paths refer to the team delivery repository. Every deliverable records an owner, reviewer, evidence link, status and revision date.
+
+| ID | Required output | Minimum evidence | Default location |
 |---|---|---|---|
-| D01 | Problem and scope | Users, reporting decisions, workflow, boundaries and value baseline | AC08, AC15 |
-| D02 | Source and data pack | Register, dictionary, immutable download workflow, hashes, licence, coverage and daily reconciliation | AC01–04 |
-| D03 | KPI engine | Reusable deterministic modules, formula catalogue, independent gold fixtures, window/filter policies | AC03–04 |
-| D04 | Evidence contract | Versioned schema, stable IDs, packet hash, metric units/periods/denominators/lineage and caveats | AC05 |
-| D05 | Local AI generation | Local model configuration, prompt versions, structured output, baseline comparison and fresh recorded run | AC06, AC08 |
-| D06 | Claim verifier | Schema, IDs, numerical/text/semantic-scope checks, failure reasons and corrupt-claim tests | AC07 |
-| D07 | Working review product | Report controls, evidence drilldown, edit/reject/approve, revision audit, approved export | AC10–12 |
-| D08 | Evaluation pack | 40 cases, gold evidence, development/holdout separation, repeated results, human scores and failure analysis | AC09 |
-| D09 | Governance | Risk register, injection tests, access/logging rules, limitations and accountable owners | AC02, AC08, AC12 |
-| D10 | Handover and submission | Setup commands, locked versions, tests, UAT, demo, cost declaration, contribution links, final tag | AC13–15 |
+| D1 | Discovery & reporting workflow | users; as-is/to-be process; ≥8 requirements; scope; stakeholder map; acceptance mapping | docs/01-discovery/ |
+| D2 | Source & governance pack | UCI source/DOI/licence; hashes; data dictionary; coverage; exclusions; attribution | docs/02-data-governance/ + data/SOURCE_REGISTER.md |
+| D3 | Reproducible analytical model | ingestion; hourly/daily grain controls; validation; canonical dates/hours; reusable modules | src/ + docs/03-data-model/ |
+| D4 | KPI & comparison catalogue | formula, period, unit, denominator, filters, coverage policy, zero-baseline handling | docs/04-kpi-catalogue/ |
+| D5 | Deterministic evidence engine | verified KPI JSON/evidence packet; stable IDs; source/period/filter lineage; materiality logic | docs/05-evidence/ + outputs/ |
+| D6 | Local AI narrative layer | pinned local model/runtime; prompt/schema; raw generations; deterministic fallback | prompts/ + docs/06-ai/ |
+| D7 | Claim verification & guardrails | numeric, period, direction, unit, evidence-ID and unsupported-causality checks | tests/ + docs/07-guardrails/ |
+| D8 | Working review product | period selection; KPI view; narrative; evidence drill-down; edit/reject/approve; export audit | app/ + outputs/examples/ |
+| D9 | Evaluation & assurance | frozen 40-case protocol; dev/holdout separation; repeated runs; metrics; failure analysis | evaluation/ |
+| D10 | UAT & technical handover | ≥10 domain tests; 3 user tasks; defects/retests; exact setup/run/restore/troubleshooting | docs/08-assurance-uat/ + docs/09-technical-handover/ |
+| D11 | Executive recommendation & demo | 2-page decision brief; 8–12 slides; live/reproducible demo; retain/revise/pilot recommendation | deliverables/ |
+| D12 | Final submission & contributions | final SHA/tag; evidence index; CONTRIBUTIONS.md; individual artefacts/reviews; limitations | submission/ + CONTRIBUTIONS.md |
 
-## Evidence expected from every team
-Commit code and documentation, not only slides. Include at least three end-to-end example bundles: a valid approved report, an insufficient-evidence response and a blocked invalid claim. Include one weather association with caveats and one report with an analyst revision, either within these examples or as additional bundles.
+## Required demonstration
 
-Exploratory notebooks are allowed, but the core data/KPI/generation/verification logic must run from reusable modules. Screenshots and a short demo aid review; they do not replace executable code, source provenance or recorded evaluations.
+Show one valid comparison window, one low-coverage/invalid window that blocks generation, one verified narrative with traceable metrics, one deliberately corrupted claim rejected by the verifier, one analyst edit that requires re-verification and one approved export.
+
+A dashboard or fluent narrative without deterministic metric evidence does not complete the project.

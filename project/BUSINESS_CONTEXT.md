@@ -1,24 +1,54 @@
-# Business context and decisions
+# Business Context — MTL-AI-047
 
-## Operating situation
-A hypothetical mobility operator holds aggregate rental records. Analysts already have counts but management briefings vary in speed, clarity and auditability. The copilot drafts a consistent explanation of verified observations while analysts remain accountable for interpretation.
+## Simulated operating environment
 
-## Decisions supported
-| User need | Evidence supplied | Permitted next step |
+A commercial mobility operator reviews historical rental activity each week and month. Analysts already calculate operational metrics, but management briefings are prepared manually and vary in clarity, consistency and traceability.
+
+The approved UCI Bike Sharing dataset contains historical aggregate rental observations, weather and calendar context. It does **not** contain station inventory, unmet demand, trip origin/destination, fares, staffing or live-service incidents.
+
+## Business problem
+
+Management needs a consistent explanation of what changed in observed rental activity, which periods were busiest, how user mix changed and where weather/calendar segments are associated with different activity levels.
+
+The risk is that a narrative generator could invent calculations, overstate causality or describe historical rental counts as current operational capacity. The project therefore separates deterministic KPI computation from AI explanation.
+
+## Commissioned decision
+
+> Can a local AI-assisted reporting workflow reduce analyst briefing effort while keeping all numbers, comparisons and evidence under deterministic control?
+
+## Users
+
+| User | Need | Decision supported |
 |---|---|---|
-| Understand rental movement | Totals, absolute/percentage change, coverage | Investigate comparable-date patterns |
-| Identify busy periods | Counts and mean per observed hour by hour-of-day | Request station and capacity data |
-| Understand user mix | Casual/registered rental totals and shares | Investigate service-use patterns |
-| Compare conditions | Weather/calendar groups, exposure and means | Explore confounders and further evidence |
-| Trust a briefing | Claim IDs, formulas, source hashes, audit | Approve, edit or reject |
+| Operations analyst | trustworthy comparisons and evidence | prepare/review briefing |
+| Operations manager | concise changes and investigation questions | choose what to investigate next |
+| Data lead | governed formulas and source lineage | approve KPI definitions |
+| AI/assurance reviewer | verify grounding and failure handling | release or rework the assistant |
+
+## Practical use case
+
+The analyst chooses a reporting period and a valid comparison period. The system first checks data coverage and calculates the agreed KPI package. Only then is the evidence packet passed to the local model.
+
+The generated briefing should cover:
+
+- total observed rentals and change;
+- busiest observed hours;
+- casual versus registered rental mix;
+- selected weather/calendar associations;
+- material drivers supported by verified calculations;
+- explicit limitations;
+- questions that require additional operational data.
+
+The analyst follows evidence IDs, edits unsupported wording, re-runs verification and approves the final management briefing.
 
 ## Interpretation boundaries
-Observed rentals reflect realised activity; they do not measure unconstrained demand. Busy-hour rankings are system-wide historical observations. There is no station stock, trip duration, trip-level origin/destination, pricing, labour or service incident data in the approved CSVs.
 
-Weather, season, working days, growth between years and hour mix can co-vary. A descriptive group difference cannot establish what caused a movement. Present sample sizes, exposure and a caveat. Never interpret casual/registered counts as unique customer counts.
+Observed rental counts are realised historical activity, not unconstrained demand. Busy hours do not prove a shortage. Weather-group differences do not prove causality. Casual/registered counts are rental records, not unique people.
+
+The AI may explain verified metrics but may not invent missing capacity, revenue, staffing, profitability or service-quality facts.
 
 ## Value measurement
-Before building, time at least three representative analyst briefing tasks with a deterministic table/template. Repeat with the copilot on the same evidence, recording total preparation plus correction time, number of factual edits and reviewer usefulness (1–5). Declare ordering/learning bias and small sample limitations. Aim for lower preparation effort without weakening correctness; numerical safety gates take priority over speed. Benefits are a hypothesis until measured.
 
-## Stakeholder sign-off
-Product owner agrees scope and investigation language; data lead signs metric definitions; AI lead documents model and prompts; QA reviews failures; an analyst reviewer approves exports. Team members may combine roles, but material calculations and final UAT need a second reviewer where a team has multiple members.
+Compare at least five representative manual briefing tasks against the assisted workflow. Record total preparation time, correction time, number of factual edits, blocked claims and reviewer usefulness. Report sample size and ordering/learning limitations.
+
+A claimed productivity gain is exploratory unless supported by a larger controlled study.
