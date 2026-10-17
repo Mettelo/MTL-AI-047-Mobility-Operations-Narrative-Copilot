@@ -1,25 +1,49 @@
-# Submission guide
+# MTL-AI-047 — Submission guide
 
-1. Create the separate team repository and add members with individual accounts. Read [repository standard](TEAM_REPOSITORY_STANDARD.md).
-2. Name owners and dates for deliverables. Use issues, branches, meaningful commits and reviews during development.
-3. Verify Mettelo access through the designated cohort route and record evidence.
-4. Finish every [deliverable](../project/DELIVERABLES.md). Replace generic instructions in the team README with real, tested application commands.
-5. Freeze data hashes, metric definitions, prompts, model digest, configuration and benchmark version.
-6. Run automated checks and the 40-case evaluation; retain raw runs and failure analysis. Never replace failed runs with cherry-picked examples.
-7. Complete [UAT/demo](../project/DEMO_UAT.md), including a fresh local model run, blocked bad claim and approval-reset demonstration.
-8. Have a reviewer follow setup from a clean checkout. Confirm no paid dependency and offline operation after initial downloads.
-9. Complete [FINAL_SUBMISSION.md](FINAL_SUBMISSION.md) with real links, actual results, limitations, contribution records and the acceptance matrix.
-10. Commit final evidence, then tag the evaluated commit `v1.0-mettelo-submission`. Record the commit SHA and tag in the submission. Submit the team repository URL through the cohort channel; do not send project files by email.
-11. Keep reviewer access active until assessment/sign-off. If fixes follow submission, identify a new version and rerun affected checks; do not silently move an assessed tag.
+## Release sequence
 
-## Final QA
-- [ ] Source manifests, licences, attribution and hashes are real.
-- [ ] Data/KPI checks pass; AI does not compute metrics.
-- [ ] Claims and rendered text verify against the correct evidence packet.
-- [ ] Unsupported requests and invalid data block or abstain correctly.
-- [ ] Edits invalidate approval; approved exports carry review/evidence hashes.
-- [ ] AI evaluation denominators, raw failures and human scores are available.
-- [ ] Local model run, setup reproduction and zero-cost path are demonstrated.
-- [ ] All members' work and peer review are visible.
-- [ ] Mettelo access is verified; final tag points to evaluated code.
-- [ ] Final submission contains no unexplained placeholders or unsupported performance claims.
+1. Complete D1–D12 and map all agreed user requirements to deliverables, acceptance criteria, tests and final evidence.
+2. Confirm the approved source/data manifest, rights/attribution, exact cohort/version and reviewer restore access.
+3. Freeze deterministic rules, prompts, model/runtime version, evaluation split, schemas and dependency lock before final held-out evaluation.
+4. Run the deterministic baseline and local-AI workflow. Preserve raw outputs, invalid outputs, retries/fallbacks, rejected claims and measured results; do not replace weak runs with hand-written examples.
+5. Execute the project-specific domain/guardrail tests and **three UAT tasks** with expected/actual results, tester/reviewer, defects and retests. Resolve all critical/high defects.
+6. Have a distinct member perform a clean rerun from the documented source and environment. Record hashes, versions, entry point, elapsed time, discrepancies and reconciliation.
+7. Produce a **2-page decision brief**, **8–12 slides** and a **5–10 minute reproducible demo** for Mobility Operations Manager. Include five evidence-backed findings, three next actions and at least one defer/unknown case.
+8. Complete `submission/FINAL_SUBMISSION.md`, `CONTRIBUTIONS.md` and the immutable evidence index.
+9. Tag the evaluated commit **`v1.0-mettelo-submission`** and verify reviewer access. Do not silently move the assessed tag.
+
+## Required walkthrough
+
+Answer the commissioned decision:
+
+> Produce a verified management briefing from deterministic mobility KPIs without allowing the AI to calculate or invent metrics.
+
+Demonstrate one valid comparison, one coverage-blocked comparison, one verified narrative, one deliberately corrupted claim rejected and one human-approved export.
+
+Show one failure/edge case and explain what the evidence **does not** support.
+
+Preserve this project boundary:
+
+> The AI writes from verified evidence only. Historical rental counts do not prove unmet demand, station shortages, revenue, staffing needs or weather causation.
+
+## Required evidence bundle
+
+- team repository URL, final commit SHA and release tag;
+- reviewed master commit;
+- requirements/traceability index;
+- source/data manifest and restore instructions;
+- deterministic baseline outputs;
+- local model/runtime/prompt/config versions;
+- held-out evaluation results with denominators;
+- failed/rejected/guarded examples;
+- UAT records and defect/retest log;
+- independent clean-rerun record;
+- technical/operational handover;
+- final decision brief and demo;
+- individual contribution evidence.
+
+## Reviewer decision
+
+The reviewer records **ACCEPTED / REWORK / BLOCKED**, actual reviewer, simulated sponsor role, date, unresolved issues and owners/due dates.
+
+A filled template, screenshot, video or fluent AI output without executed evidence is not acceptance.
